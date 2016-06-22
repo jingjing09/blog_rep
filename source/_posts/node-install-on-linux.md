@@ -38,52 +38,72 @@ tags: node
 
 **step 2：进入 softwares 目录下并下载二进制文件**
 
-	cd softwears && wget https://nodejs.org/dist/v6.2.1/node-v6.2.1-linux-x64.tar.xz
+~~~bash
+cd softwears && wget https://nodejs.org/dist/v6.2.1/node-v6.2.1-linux-x64.tar.xz
+~~~
 	
 **step 3：解压文件**
 
-	tar Jxf node-v6.2.1-linux-x64.tar.xz
+~~~bash
+tar Jxf node-v6.2.1-linux-x64.tar.xz
+~~~
 	
 **step 4：将解压后的文件移到 local 目录下**
 
-	mv node-v6.2.1-linux-x64 ~/local
+~~~bash
+mv node-v6.2.1-linux-x64 ~/local
+~~~
 	
 **step 5：验证 node 是否安装成功**
 
 解压后的目录下有个 bin 目录，里面有我们需要的两个可执行文件 node 和 npm。我们可以可以在这个 bin 目录下执行 node 和 npm 命令。
 
-	cd ~/local/node-v6.2.1-linux-x64/bin && ./node -v
+~~~bash
+cd ~/local/node-v6.2.1-linux-x64/bin && ./node -v
+~~~
 	
 **step 6：设置环境变量**
 
 我们可以进到这个 bin 目录执行 node 和 npm 命令，但是出了这个目录就不行了，为了在外面也可以执行，需要把它设置进 PATH 环境变量。
 
-	vim ~/.bashrc
+~~~bash
+vim ~/.bashrc
+~~~
 	
 然后插入：
 
-	HOME="/home/jingjing"
-	PATH="$PATH:$HOME/bin:$HOME/local/node-v6.2.1-linux-x64/bin"
+~~~bash
+HOME="/home/jingjing"
+PATH="$PATH:$HOME/bin:$HOME/local/node-v6.2.1-linux-x64/bin"
+~~~
 	
 ## 源码安装
 
 **step 1：去官网下载 source code**
 
-	wget https://nodejs.org/dist/v6.2.2/node-v6.2.2.tar.gz
+~~~bash
+wget https://nodejs.org/dist/v6.2.2/node-v6.2.2.tar.gz
+~~~
 	
 **step 2：解压**
 
-	tar xvf node-v6.2.2.tar.gz
+~~~bash
+tar xvf node-v6.2.2.tar.gz
+~~~
 	
 **step 3: 编译**
 
-	cd node-v6.2.2/
-	./configure
-	make
+~~~bash
+cd node-v6.2.2/
+./configure
+make
+~~~
 	
 **step 4: 安装**
 
-	make install
+~~~bash
+make install
+~~~
 	
 **step 5：设置环境变量**
 
